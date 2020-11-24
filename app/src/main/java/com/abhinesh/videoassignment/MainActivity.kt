@@ -5,9 +5,11 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.LayoutInflater
+import android.view.Menu
 import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseAdapter
+import android.widget.SearchView
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.mylayout.view.*
 
@@ -21,7 +23,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        supportActionBar?.hide()
+//        supportActionBar?.hide()
 
         foodlist.add(Food("Coffee","OXVcMogNVRE",R.drawable.one))
         foodlist.add(Food("Tea","psPj_hqxp0I",R.drawable.eight))
@@ -29,7 +31,6 @@ class MainActivity : AppCompatActivity() {
         foodlist.add(Food("Fries","XNTMfax5Q5w",R.drawable.five))
         foodlist.add(Food("Cherry","lwLnObYwfCA",R.drawable.four))
         foodlist.add(Food("Cookie","B3OjfK0t1XM",R.drawable.nine))
-        foodlist.add(Food("Pastry","DkvLCjFiODw",R.drawable.seven))
 
         adapter = FoodAdapter(this,foodlist)
         gridview.adapter = adapter
@@ -74,5 +75,14 @@ class MainActivity : AppCompatActivity() {
             return foodview
         }
 
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.up_nav_menu,menu)
+        val search = menu?.findItem(R.id.upSearch)
+        val searchView = search?.actionView as SearchView
+        searchView.queryHint ="Search Something!"
+
+        return super.onCreateOptionsMenu(menu)
     }
 }
