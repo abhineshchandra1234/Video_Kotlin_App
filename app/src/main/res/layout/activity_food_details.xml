@@ -34,30 +34,29 @@
     <!--        app:layout_constraintStart_toStartOf="parent"-->
     <!--        app:layout_constraintTop_toBottomOf="@+id/imageView2" />-->
 
-<!--    <VideoView-->
-<!--        android:id="@+id/videoView"-->
-<!--        android:layout_width="0dp"-->
-<!--        android:layout_height="269dp"-->
-<!--        android:layout_centerInParent="true"-->
-<!--        android:layout_marginStart="27dp"-->
-<!--        android:layout_marginEnd="27dp"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintHorizontal_bias="0.0"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent"-->
-<!--        app:layout_constraintVertical_bias="0.034" />-->
-
-    <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
-        android:id="@+id/third_party_player_view"
-        android:layout_width="389dp"
-        android:layout_height="317dp"
-        android:layout_margin="10dp"
-        android:padding="10dp"
+    <VideoView
+        android:id="@+id/videoView"
+        android:layout_width="0dp"
+        android:layout_height="269dp"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="27dp"
+        android:layout_marginEnd="27dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.499" />
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--    <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView-->
+<!--        android:id="@+id/third_party_player_view"-->
+<!--        android:layout_width="389dp"-->
+<!--        android:layout_height="317dp"-->
+<!--        android:layout_margin="10dp"-->
+<!--        android:padding="10dp"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.499" />-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>
